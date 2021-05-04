@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 
 
-class Expense():
+class Expense:
     def __init__(self, date_str, vendor, category, amount):
         self.date_time = datetime.strptime(date_str, '%m/%d/%Y %H:%M:%S')
         self.vendor = vendor
@@ -10,7 +10,7 @@ class Expense():
         self.amount = amount
 
 
-class Expenses():
+class Expenses:
     def __init__(self):
         self.list = []
         self.sum = 0
@@ -35,7 +35,7 @@ class Expenses():
                     i.category == 'Classes' or i.category == 'Utilities' or
                     i.category == 'Mortgage'):
                 necessary_expenses.add(i)
-            elif (i.category == 'Groceries' or i.category == 'Eating Out'):
+            elif i.category == 'Groceries' or i.category == 'Eating Out':
                 food_expenses.add(i)
             else:
                 unnecessary_expenses.add(i)
